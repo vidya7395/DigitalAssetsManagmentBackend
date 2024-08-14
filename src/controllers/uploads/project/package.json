@@ -1,0 +1,12 @@
+{
+  "name": "project",
+  "version": "1.0.0",
+  "main": "dist/jsx/index.js",
+  "types": "dist/tsx/index.d.ts",
+  "author": "Mrunal Patel",
+  "peerDependencies": {
+    "react": ">= 16",
+    "react-dom": ">= 16"
+  },
+  "devDependencies": {}
+}
