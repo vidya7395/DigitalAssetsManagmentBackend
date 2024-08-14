@@ -2,11 +2,11 @@
   "name": "digital-assets-platform-nodejs",
   "version": "1.0.0",
   "description": "svg to react js component converter",
-  "main": "index.js",
+  "main": "src/index.js",
   "type": "module",
   "scripts": {
     "build": "webpack",
-    "start": "node index.js",
+    "start": "node src/index.js",
     "dev": "nodemon -r dotenv/config --experimental-json-modules src/index.js"
   },
   "repository": {
