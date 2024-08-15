@@ -21,6 +21,7 @@ import projectRoutes from "./routes/project.routes.js";
 import variantRoutes from "./routes/variant.routes.js";
 import categoryRoutes from "./routes/category.routes.js";
 import svgToReactRoutes from "./routes/svgToReact.routes.js";
+import { ApiResponse } from "./utils/apiResponse.js";
 //routes declaration
 // console.log("Reached here");
 app.get("/", (req, res) => {
@@ -35,7 +36,8 @@ app.get("/", (req, res) => {
             "download": "/api/v1/download"
         }
     }
-    res.send(jsonTobeSend);
+    res.status(200)
+    .json(new ApiResponse(200, "Welcome to the SVG to React API",jsonTobeSend));
 });
 app.use("/api/v1/style", styleRoutes);
 app.use("/api/v1/icon", iconRoutes);
