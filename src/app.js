@@ -24,7 +24,18 @@ import svgToReactRoutes from "./routes/svgToReact.routes.js";
 //routes declaration
 // console.log("Reached here");
 app.get("/", (req, res) => {
-    res.send("Hello World");
+    const jsonTobeSend={
+        "message":"Hello World",
+        "routes": {
+            "style": "/api/v1/style",
+            "icon": "/api/v1/icon",
+            "project": "/api/v1/project",
+            "variants": "/api/v1/variants",
+            "category": "/api/v1/category",
+            "download": "/api/v1/download"
+        }
+    }
+    res.send(jsonTobeSend);
 });
 app.use("/api/v1/style", styleRoutes);
 app.use("/api/v1/icon", iconRoutes);
