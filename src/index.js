@@ -38,10 +38,15 @@ app.on("error", (error) => {
   console.error(chalk.bgRedBright(`Express error: ${error}`));
 });
 
+app.listen(process.env.PORT || 8000, () => {
+  console.log(chalk.bgGreen(`App is running on port http://localhost:${process.env.PORT}`));
+  console.log(chalk.bgMagenta("Go ahead and test the API using Postman or any other tool"));
+});
+
 // Global error handling for the app
 app.use((err, req, res, next) => {
     console.error(err.stack);
     res.status(500).status(chalk.bgRedBright('Something broke!', err));
 });
 
-connectDB();
+// connectDB();

@@ -23,6 +23,9 @@ import categoryRoutes from "./routes/category.routes.js";
 import svgToReactRoutes from "./routes/svgToReact.routes.js";
 //routes declaration
 // console.log("Reached here");
+app.get("/", (req, res) => {
+    res.send("Hello World");
+});
 app.use("/api/v1/style", styleRoutes);
 app.use("/api/v1/icon", iconRoutes);
 app.use("/api/v1/project", projectRoutes);
